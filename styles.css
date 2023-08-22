@@ -75,7 +75,7 @@ a:hover{
 
 .sec{
     margin-top: 150px;
-/*     margin-left: calc(50% - 650px); */
+    margin-left: calc(50% - 650px); 
     margin-bottom: 150px;
     
     
@@ -151,7 +151,7 @@ a:hover{
         height: 100%;
         overflow: hidden;
         display: flex;
-/*         flex-shrink: 0; */
+        flex-direction: row;
         gap: 20px;
 /*         background-color: blue; */
     }
@@ -298,7 +298,6 @@ a:hover{
     .slideButtons{
         display: flex;
       margin-top: 1rem;
-/*         margin-left: calc(60%); */
     }
         .B1{
             cursor: pointer;
