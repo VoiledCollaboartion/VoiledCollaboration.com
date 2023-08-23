@@ -5,7 +5,9 @@
     --greencolor: rgb(90,183,130);
     --grayWhite: rgb(131,136,136);
 }
-
+.noclass{
+    background-color:green;
+}
 body{
     margin: 0;
     padding: 0;
