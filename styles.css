@@ -387,10 +387,12 @@ a:hover{
     }
 
     .AbImg{
-        width: 120px;
+        width: 100px;
         height: auto;
-        margin-left: calc(50% - 60px);
-        margin-top: 10px;
+        margin-left: calc(50% - 50px);
+        margin-top: 30px;
+        margin-bottom: 10px;
+        
     }
     .AbH2{
         color: var(--txtColor);
