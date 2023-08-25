@@ -13,9 +13,8 @@ body{
     padding: 0;
     background-color: var(--graycolor);
     background-image: url(Photos/linesGraphic.png);
-    background-image: url(Photos/linesGraphic.png);
     background-repeat: no-repeat;
-    background-position-x: 760px;
+    background-position-x:calc(80% + 100px);
 }
 a:link{
     color: var(--txtColor);
@@ -80,32 +79,35 @@ a:hover{
 
 
 .sec{
+
+    display: flex;
     margin-top: 150px;
-    margin-left: calc(50% - 650px); 
+    justify-content: center;
+    flex-wrap: wrap;
     margin-bottom: 150px;
+    gap: 10px;
     
     
   }
 
 .desc{
-    /*border: solid 1px;*/
+    /* background-color: brown;  */
     width: 700px;
     height: 500px;
-    float:left;
 }
     .p1{
         font-family: "Roboto", sans-serif;
         font-weight:900;
-        font-size: 40px;
+        font-size: calc(0.8em + 2vw);
         color: var(--txtColor);
         line-height: 1.4;
     }
     .p2{
         font-family: "Roboto", sans-serif;
         font-weight:400;
-        font-size: 20px;
         color: var(--grayWhite);
         line-height: 1.4;
+        font-size: calc(0.2em + 1vw);
     }
 
     .button1Sec1{
@@ -143,165 +145,165 @@ a:hover{
         color: var(--txtColorHover);
     }
 
+   
     .buttonsspace{
-/*         background-color: rgb(255, 0, 0); */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      
-      width: 600px;
-      height: 560px;
+        background-color: brown;
+        display: flex;
+        
+        flex-direction: column;
+        overflow: hidden;
+        width: 600px;
+        height: 560px;
     }
 
 
     .slide{
-        width: 100%;
-        height: 100%;
+        width: auto;
+        height: 560px;
         overflow: hidden;
         display: flex;
         flex-direction: row;
         gap: 20px;
-/*         background-color: blue; */
+      background-color: blue; 
     }
 
 
 /*CARD 1*/
-    .card{
-        background-color: black;
-        height: 500px;
-        width: 380px;
-        transition: left 1s;
-        border-radius: 25px;
-        overflow: hidden;
+        .card{
+            background-color: black;
+            height: 500px;
+            width: 380px;
+            transition: left 1s;
+            border-radius: 25px;
+            overflow: hidden;
 
-        flex-shrink: 0;
+            flex-shrink: 0;
 
-        position: relative;
-        left: 0px;
-        
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            position: relative;
+            left: 0px;
+            
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-    }
-    .imgcontainer{
-
-        width: 100%;
-        height: 400px;
-        overflow: hidden;
-    }
-
-        .imgS1{
-            width: auto;
-            height: 100%;
-            box-shadow: inset white 10px 10px 10px;
-            transition: height 1s;  
         }
-        
+        .imgcontainer{
 
-
-    .imgdesc{
-        background-color: rgb(40,48,57);
-        height: 160px;
-        width: 100%;
-        margin-top: 0px;
-        padding: 0%;
-        overflow: hidden;
-
-
-    }
-        .descH1{
-            margin-left: 25px;
-            margin-right: 25px;
-            margin-bottom: 0;
-            color: var(--txtColor);
-        }
-        .descH2{
-            margin-left: 25px;
-            margin-right: 25px;
-            color: var(--grayWhite);
-            margin-top: 0;
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
         }
 
+            .imgS1{
+                width: auto;
+                height: 100%;
+                box-shadow: inset white 10px 10px 10px;
+                transition: height 1s;  
+            }
+            
 
-    /*CARD 2*/
-    .card2{
-        height: 500px;
-        width: 380px;
-        transition: left 1s;
-        border-radius: 25px;
-        overflow: hidden;
 
-        flex-shrink: 0;
+        .imgdesc{
+            background-color: rgb(40,48,57);
+            height: 160px;
+            width: 100%;
+            margin-top: 0px;
+            padding: 0%;
+            overflow: hidden;
 
-        position: relative;
-        left: 0px;
 
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
+        }
+            .descH1{
+                margin-left: 25px;
+                margin-right: 25px;
+                margin-bottom: 0;
+                color: var(--txtColor);
+            }
+            .descH2{
+                margin-left: 25px;
+                margin-right: 25px;
+                color: var(--grayWhite);
+                margin-top: 0;
+            }
 
-    .imgcontainer2{
-        width: 380px;
-        height: 400px;
-        overflow: hidden;
-    }
 
-        .imgS12{
+        /*CARD 2*/
+        .card2{
+            height: 500px;
+            width: 380px;
+            transition: left 1s;
+            border-radius: 25px;
+            overflow: hidden;
+
+            flex-shrink: 0;
+
+            position: relative;
+            left: 0px;
+
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .imgcontainer2{
             width: 380px;
             height: 400px;
-            box-shadow: inset white 10px 10px 10px;
-            transition: height 1s;  
+            overflow: hidden;
         }
-        
+
+            .imgS12{
+                width: 380px;
+                height: 400px;
+                box-shadow: inset white 10px 10px 10px;
+                transition: height 1s;  
+            }
+            
 
 
-    .imgdesc2{
-        background-color: rgb(40,48,57);
-        height: 160px;
-        width: 100%;
-        margin-top: 0px;
-        overflow: hidden;
+        .imgdesc2{
+            background-color: rgb(40,48,57);
+            height: 160px;
+            width: 100%;
+            margin-top: 0px;
+            overflow: hidden;
 
-    }
-    /*CARD3*/
-
-    .card3{
-        height: 500px;
-        width: 380px;
-        transition: left 1s;
-        border-radius: 25px;
-        overflow: hidden;
-
-        flex-shrink: 0;
-
-        position: relative;
-        left: 0px;
-
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-    .imgcontainer3{
-        width: 380px;
-        height: 400px;
-        overflow: hidden;
-    }
-
-        .imgS13{
-            width: auto;
-            height: 100%;
-            box-shadow: inset white 10px 10px 10px;
-            transition: height 1s;  
         }
-        
+        /*CARD3*/
+
+        .card3{
+            height: 500px;
+            width: 380px;
+            transition: left 1s;
+            border-radius: 25px;
+            overflow: hidden;
+
+            flex-shrink: 0;
+
+            position: relative;
+            left: 0px;
+
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .imgcontainer3{
+            width: 380px;
+            height: 400px;
+            overflow: hidden;
+        }
+
+            .imgS13{
+                width: auto;
+                height: 100%;
+                box-shadow: inset white 10px 10px 10px;
+                transition: height 1s;  
+            }
+            
 
 
-    .imgdesc3{
-        background-color: rgb(40,48,57);
-        height: 160px;
-        width: 100%;
-        margin-top: 0px;
-        border: 1px solid transparent;
-        overflow: hidden;
+        .imgdesc3{
+            background-color: rgb(40,48,57);
+            height: 160px;
+            width: 100%;
+            margin-top: 0px;
+            border: 1px solid transparent;
+            overflow: hidden;
 
-    }
+        }
    
     
     .slideButtons{
@@ -343,6 +345,31 @@ a:hover{
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
 
+        @media only screen and (max-width: 1350px) {
+            .desc{
+                /* background-color: brown; */
+                width: 500px;
+                height: 500px;
+            }
+            .button1Sec1{
+                padding: 9px 45px;
+                font-size: 16.2px;
+                margin-right: 9px;
+            }
+            .button2Sec1{
+                padding: 9px 63px;
+                border-radius: 20px;
+                font-size: 16.2px;
+                border: none;
+                background-color: transparent;
+                border: 2px solid var(--greencolor);
+                color: var(--txtColor);
+                cursor: pointer;
+                transition: background-color 0.3s;
+                box-shadow:  4px 0 8px 0 rgba(0, 0, 0, 0.2),  6px 0 20px 0 rgba(0, 0, 0, 0.19);
+            }
+        }
+    
     
 /*Section Page 2 */
 
@@ -445,8 +472,9 @@ a:hover{
     .Sec3Body{
         height: 400px;
     }
+
         .Sec3Body1{
-            /* background-color: brown; */
+            /* background-color: brown;  */
             margin-top: 100px;
             height: auto; 
             display: flex;
