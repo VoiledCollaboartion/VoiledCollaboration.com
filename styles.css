@@ -351,7 +351,6 @@ a:hover{
 
     .AboutusBox{
         display: flex;
-    /*  background-color: brown;  */
         height: 400px;
         justify-content: center;
         align-items: center;
@@ -385,7 +384,7 @@ a:hover{
     .AbP{
         margin-left: 10px;
         margin-right: 10px;
-        color: var(--txtColor);
+        color: var(--grayWhite);
         text-align: center;
         font-size: 1.1em;
     }
