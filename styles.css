@@ -56,6 +56,7 @@ a:hover{
             text-decoration: none;
             padding: 15px 30px;
             background-color: var(--graycolor);
+           
         }
         .navS1{
             margin-left: 100px;
@@ -155,7 +156,7 @@ a:hover{
 
     .slide{
         width: auto;
-        height: 560px;
+        height: auto;
         display: flex;
         position: relative;
         left: 0;
@@ -224,33 +225,11 @@ a:hover{
     
     .slideButtons{
         display: flex;
+        gap: 15px;
         margin-top: 1rem;
-        margin-left: calc(50% - 52.5px);
+        justify-content: center;
     }
         .B1{
-            cursor: pointer;
-            flex-shrink: 0;
-            width: 25px;
-            height: 25px;
-            background-color: var(--greencolor);
-            border: 1px solid var(--greencolor);
-            border-radius: 50%;
-            margin-right: 15px;
-            transition: background-color 1s;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-        .B2{
-            cursor: pointer;
-            flex-shrink: 0;
-            width: 25px;
-            height: 25px;
-            border: 1px solid var(--greencolor);
-            border-radius: 50%;
-            margin-right: 15px;
-            transition: background-color 1s;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-        .B3{
             cursor: pointer;
             flex-shrink: 0;
             width: 25px;
@@ -261,7 +240,8 @@ a:hover{
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
 
-        @media only screen and (max-width: 1350px) {
+
+        @media only screen and (max-width: 1370px) {
             .desc{
                 /* background-color: brown; */
                 width: 500px;
@@ -284,6 +264,46 @@ a:hover{
                 transition: background-color 0.3s;
                 box-shadow:  4px 0 8px 0 rgba(0, 0, 0, 0.2),  6px 0 20px 0 rgba(0, 0, 0, 0.19);
             }
+            .card{
+                height: 400px;
+                width: 304px;
+            }
+            .slide{
+                gap: 16px;
+                margin-top: 10px;
+            }
+            .buttonsspace{ 
+                width: 480px;
+                height: 610px;
+            }
+            .navA{ /*Navigation Navigation link*/
+                padding: 9.6px 19.2px;
+                       
+            }
+            .navS1{
+                margin-left: 80px;
+                overflow: hidden;
+                width: 124.8px;
+                height: 38.4px;
+                margin-top: 19.2px;
+                        
+            }
+            .navS2{
+                padding: 19.2px 25.6px;
+            }
+                .navA:hover{
+                    background-color:var(--graycolor);
+                    text-align: center;
+                }
+                .sec{
+                    margin-top: 120px;
+                }
+            
+            .B1{
+                width: 20px;
+                height: 20px;
+            }        
+            
         }
     
     
