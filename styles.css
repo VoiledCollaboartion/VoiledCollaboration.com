@@ -248,7 +248,7 @@ a:hover{
                 height: 500px;
             }
             .sec{
-                margin-bottom: 120px;
+                margin-bottom: 110px;
             }
             .button1Sec1{
                 padding: 9px 45px;
@@ -279,6 +279,20 @@ a:hover{
                 width: 480px;
                 height: 610px;
             }
+            .descH1{
+                margin-left: 20px;
+                margin-right: 20px;
+                font-size: 21px;
+                margin-top: 10px;
+            }
+            .descH2{
+                margin-left: 20px;
+                margin-right: 2px;
+                font-size: 12.8px;
+            }
+
+
+
             .navA{ /*Navigation Navigation link*/
                 padding: 9.6px 19.2px;
                        
