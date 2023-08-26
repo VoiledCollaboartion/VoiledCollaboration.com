@@ -36,14 +36,14 @@ function move() {
         let B2 = document.getElementById("B2");
         let B3 = document.getElementById("B3");
 
-        slide.style.left = "-400px";
+        slide.style.left = "-66.5%";
         
 
         B2.style.backgroundColor = "var(--greencolor)"
 
         // Pause for 4 seconds, then move to -800px
         setTimeout(function() {
-            slide.style.left = "-800px";
+            slide.style.left = "-132%";
 
             B3.style.backgroundColor = "var(--greencolor)"
 
@@ -92,7 +92,7 @@ function clickToMoveB2(){
     let B3 = document.getElementById("B3");
 
 
-        slide.style.left = "-400px";
+        slide.style.left = "-66.5%";
 
         B1.style.backgroundColor = "var(--greencolor)"
         B2.style.backgroundColor = "var(--greencolor)"
@@ -107,7 +107,7 @@ function clickToMoveB3(){
     let B2 = document.getElementById("B2");
     let B3 = document.getElementById("B3");
 
-        slide.style.left = "-800px";
+        slide.style.left = "-132%";
 
         B2.style.backgroundColor = "var(--greencolor)"
         
