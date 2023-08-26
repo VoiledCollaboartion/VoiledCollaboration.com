@@ -15,6 +15,7 @@ body{
     background-image: url(Photos/linesGraphic.png);
     background-repeat: no-repeat;
     background-position-x:calc(80% + 100px);
+    overflow-x: hidden;
 }
 a:link{
     color: var(--txtColor);
@@ -351,17 +352,19 @@ a:hover{
 
     .AboutusBox{
         display: flex;
+        flex-wrap: wrap;
         height: 400px;
         justify-content: center;
-        align-items: center;
+        align-items: center; 
         gap: 1% ;
 
         
     }
-
+    /*  */
     .AbCard{
         width: 300px;
         height: 340px;
+        min-width: 300px;
         background-color: rgb(40,48,57);
         box-shadow:  4px 0 8px 0 rgba(0, 0, 0, 0.2),  6px 0 20px 0 rgba(0, 0, 0, 0.19);
         flex-shrink: 0;
@@ -388,7 +391,79 @@ a:hover{
         text-align: center;
         font-size: 1.1em;
     }
+    .responsdiv{
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        gap: 1%;
+    }
+    .mt20px{
+        margin-top: 0px;
 
+    }
+
+
+    @media only screen and (max-width: 1228px) {
+        .sec2{
+            width: 100%;
+            height: auto;
+        }
+        
+        .AboutusBox{
+            
+            display: flex;
+            flex-wrap: wrap;
+            height: auto;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 40px;
+      
+        }
+
+        .responsdiv{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            flex-grow: 1;
+            background-color: brown;
+            flex-wrap: wrap;
+        }
+
+        .mt20px{
+            margin-top: 0px;
+    
+        }
+
+
+        .AbCard{
+            flex-grow: 1;
+            min-width: 400px;
+            height: auto;
+            flex-shrink: 0;
+            border-radius: 10px;
+        }
+    
+        .AbImg{
+            width: 100px;
+            height: auto;
+            margin-left: calc(50% - 50px);
+            margin-top: 30px;
+            margin-bottom: 10px;
+            
+        }
+        .AbH2{
+            text-align: center;
+            margin-top: 0px;
+            font-size: 24px;
+        }
+        .AbP{
+            margin-left: 10px;
+            margin-right: 10px;
+            text-align: center;
+            font-size: 1.1em;
+        }
+    }
 
     /* SECTION 3 */
 
