@@ -15,7 +15,6 @@ body{
     background-image: url(Photos/linesGraphic.png);
     background-repeat: no-repeat;
     background-position-x:calc(80% + 100px);
-    overflow-x: hidden;
 }
 a:link{
     color: var(--txtColor);
@@ -88,6 +87,7 @@ a:hover{
     flex-wrap: wrap;
     margin-bottom: 150px;
     gap: 10px;
+    flex-wrap: wrap;
     
     
   }
@@ -345,7 +345,7 @@ a:hover{
     }
     .aboutusH2{
         color: var(--txtColor);
-        font-size: calc( 0.5em + 2.2vw) ;
+        font-size: calc( 0.5em + 2.2vw);
         text-align: center;
         margin-top: 40px;
     }
@@ -356,7 +356,7 @@ a:hover{
         height: 400px;
         justify-content: center;
         align-items: center; 
-        gap: 1% ;
+        gap: 10px;
 
         
     }
@@ -395,7 +395,7 @@ a:hover{
         height: auto;
         display: flex;
         flex-direction: row;
-        gap: 1%;
+        gap: 10px;
     }
     .mt20px{
         margin-top: 0px;
@@ -426,7 +426,6 @@ a:hover{
             flex-direction: row;
             gap: 10px;
             flex-grow: 1;
-            background-color: brown;
             flex-wrap: wrap;
         }
 
@@ -479,7 +478,8 @@ a:hover{
         color: var(--txtColor);
         text-transform: uppercase;
         font-weight: 7000;
-        font-size: 2.8em;
+        /* font-size: 2.8em; */
+        font-size: calc( 0.5em + 2.2vw);
     }
 
     .Sec3HB{
@@ -497,17 +497,18 @@ a:hover{
     }
 
     .Sec3Body{
-        height: 400px;
+        height: auto;
+        background-color: brown;
     }
 
         .Sec3Body1{
-            /* background-color: brown;  */
             margin-top: 100px;
             height: auto; 
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 200px;
+            gap: 5%;
+            background-color: rgb(50, 42, 165);
         }
 
             .Sec3BodyImg1{
@@ -550,6 +551,60 @@ a:hover{
 
             }
 
+            @media only screen and (max-width: 1100px) {
+                .Sec3Body1{
+                    flex-wrap: wrap;
+                }
+                .Sec3HB{
+                    height: 40px;
+                    width: 112px;
+                    margin-left: 16px;
+                    font-size: 1em;
+                    border-radius: 16px;
+                                        
+                }
+                .Sec3BodyCard1{
+                    width: 90%;
+                }
+                .Sec3BodyImg1{
+                    width: 320px;
+                    height: auto;
+                    
+                }
+                .Sec3BodyCard1{
+                    margin-top: 12px;
+                    width: 90%;
+                    height: auto;
+                    border-radius: 16px;
+                }
+                .Sec3BodyCard1H{
+                    font-size: 1.6em;
+                    margin-left: 16px; 
+                    margin-right: 16px;
+                }
+                .Sec3SuggestP{
+                    font-size: 1em;
+                    margin-right: 16px;
+                    margin-left: 16px;
+                }
+                .OrSeperater{
+                    position: relative;
+                    top: 80px;
+                    font-size:6.4em;
+    
+                }
+            
+            }
+            @media only screen and (max-width: 434px) {
+                .Sec3BodyImg1{
+                    width: 256px;
+                    height: auto;
+            }
+
+
+
+
+
     .footer{
         background-color:  rgb(40,48,57);
         width: 100%;
@@ -575,3 +630,4 @@ a:hover{
                 margin-top: 10px;
                 text-align: center;
             }
+    }
