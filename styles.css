@@ -498,7 +498,6 @@ a:hover{
 
     .Sec3Body{
         height: auto;
-        background-color: brown;
     }
 
         .Sec3Body1{
@@ -508,7 +507,6 @@ a:hover{
             align-items: center;
             justify-content: center;
             gap: 5%;
-            background-color: rgb(50, 42, 165);
         }
 
             .Sec3BodyImg1{
