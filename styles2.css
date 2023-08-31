@@ -2,82 +2,132 @@
     --white99: rgb(243, 243, 243);
     --white90: rgb(247,247,247);
     --white70: rgb(231, 231, 231);
+    --black99: rgb(40,48,57);
+    --black90: rgb(48,56,65);
+    --black70: rgb(59, 66, 75);
+
     --green100: rgb(90,183,130);
-    --black100: rgb(61,68,101);
     --yellow: rgb(255,248,8);
     --textcolor: rgb(61,68,101);
     /* Some more colors */
-    --blue: #5e72e4;
-    --indigo: #6610f2;
-    --purple: #6f42c1;
-    --pink: #e83e8c;
-    --red: #EE3232;
-    --orange: #ff9900;
-    --yellow: #FFFA6F;
-    --green: #297F00;
-    --teal: #20c997;
-    --cyan: #3065D0;
-    --white: #fff;
-    --gray: #6c757d;
-    --gray-dark: #343a40;
     --primary: #5ab782;
     --secondary: #B655E4;
     --success: #37D159;
     --info: #2B98D6;
     --warning: #FF9F0F;
     --danger: #FF6746;
-    --light: #F4F5F9;
-    --dark: #6e6e6e;
 }
 
 
-
-.item1 { grid-area: header; }
-.item2 { grid-area: aside; }
-.item3 { grid-area: frame; }
-.item4 { grid-area: right; }
-.item5 { grid-area: footer; }
+a:link{
+  color: var(--txtColor);
+  text-decoration: none;
+}
+a:visited{
+  color: var(--txtColor);
+  text-decoration: none;
+}
+a:active{
+  color: var(--txtColor);
+  text-decoration: none;
+}
+a:hover{
+  color: var(--txtColorHover);
+  text-decoration: none;
+}
 
 body{
-    /* background-color: var(--white70); */
-    background-color: #5ab782;
+    padding: 0;
     margin: 0;
+    box-sizing: boreder-box;
+    background-color: var(--black70);
+  }
+  
+  .container {  
     display: grid;
+    min-height: 100vh;
+    grid-template-columns: 240px 10px 1fr 240px;
+    grid-template-rows: 100px 10px 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
     grid-template-areas:
-    'aside header header header header header'
-    'aside frame frame frame frame frame'
-    'aside frame frame frame frame frame';
-    grid-template-columns: auto auto auto;
-    grid-template-rows: 100px auto auto;
-    /* overflow: hidden; */
-}
+      "aside navbar navbar navbar"
+      "aside body body ad"
+      "aside body body ad";
+  }
+  
+  .aside { 
+  grid-area: aside; 
+  z-index: 2;
+  background-color: var(--black99);
+  box-shadow:  24px 0px 80px 0 rgba(0, 0, 0, 0.2), 26px 0px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+    .logo{
+      width: 80%;
+      height: auto;
+      margin: 25px;
+    }
 
-.aside1{
-    position: fixed;
-    background-color: var(--white99);
-    width: 240px;
-    height: 1000px;
-    box-shadow: 20px 0px 25px rgba(202, 202, 202, 0.1), 25px 0px 30px rgba(226, 226, 226, 0.05);
-    z-index: 2;
-}
+    .asideA{/*Aside Links*/
+      display: flex;
+      flex-direction: column;
+    }
+      .hToSec{/*Links Sections*/
+        width: 100%;
+        display: flex;
+        gap: 5px;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        height: 70px;
+      }
+        .sIcon{/* Icon inside the div section categories */
+          width: 40px;
+          height: auto;
+          margin-left: 15px;
+        }
+        .iconDesc{
+          font-family: "Roboto", sans-serif;
+          font-size: 1.2em;
+          text-align: center;
+          color: var(--white70);
+          font-weight: 700;
+          line-height: 1.2;
+        }
 
-.nav{
-    background-color: var(--white90);
-    /* width: 100%; */
-    position: fixed;
-}  
-
-.mF{ /* Main frame */
-    background-color: var(--white70);
-}
-.testdivparent{
+  
+  .navbar { 
+    grid-area: navbar; 
+    background-color: var(--black90);
+  }
+  
+  .body { 
+    grid-area: body; 
+    background-color: var(--black70);
+    z-index: 3;
+  }
+  
+  .bodydiv{
+    grid-area: body; 
     display: flex;
     flex-direction: row;
+    gap: 50px;
     flex-wrap: wrap;
-    gap: 30px;
-}
-.testdiv{
-    background-color: #297F00;
-    width: 500px;
-    height: 300px;
-}
+    margin-left: 10px;
+    margin-top: 10px;
+    display: none;
+    
+  }
+  .ad{
+    grid-area: ad;
+    margin-top: 10px;
+    background-color: rgb(119, 255, 8);
+  }
+  .card{
+    width: 400px;
+    height: 600px;
+    background-color: #09008a;
+    flex-shrink: 0;
+  }
+  
