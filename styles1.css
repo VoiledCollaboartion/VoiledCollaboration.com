@@ -12,9 +12,17 @@ body{
     margin: 0;
     padding: 0;
     background-color: var(--graycolor);
-    background-image: url(Photos/linesGraphic.png);
     background-repeat: no-repeat;
-    background-position-x:calc(80% + 100px);
+    background-image: url(Photos/BackgroundV2P1PC.png);
+    background-size: 100%;
+    background-position: bottom left;
+    background-position-y: 100px;
+}
+@media only screen and (max-width: 990px) {
+    body{
+        background-image: url(Photos/BackgroundV2P1Phone.png);
+    }
+
 }
 a:link{
     color: var(--txtColor);
@@ -80,12 +88,11 @@ a:hover{
 
 
 .sec{
-
     display: flex;
-    margin-top: 150px;
+    margin-top: 150px; 
+    height:calc(100dvh - 150px);
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 150px;
     gap: 10px;
     flex-wrap: wrap;
     
@@ -248,7 +255,7 @@ a:hover{
                 height: 500px;
             }
             .sec{
-                margin-bottom: 110px;
+                margin-bottom: 80px;
             }
             .button1Sec1{
                 padding: 9px 45px;
@@ -277,7 +284,7 @@ a:hover{
             }
             .buttonsspace{ 
                 width: 480px;
-                height: 610px;
+                height: 510px;
             }
             .descH1{
                 margin-left: 20px;
@@ -324,7 +331,9 @@ a:hover{
         }
 
         @media only screen and (max-width: 990px) {
-            
+            .sec{
+                height: auto;
+            }
             .navS1{
                 margin-left: 50px;
                 width: 110px;

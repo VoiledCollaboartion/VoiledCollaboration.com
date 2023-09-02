@@ -5,6 +5,7 @@
     --black99: rgb(40,48,57);
     --black90: rgb(48,56,65);
     --black70: rgb(59, 66, 75);
+    --grayWhite: rgb(131,136,136);
 
     --green100: rgb(90,183,130);
     --yellow: rgb(255,248,8);
@@ -52,6 +53,8 @@ body{
     grid-auto-flow: row;
     grid-template-areas:
       "aside navbar navbar navbar"
+      /* "aside body body ad"
+      "aside body body ad"; */
       "aside body body ad"
       "aside body body ad";
   }
@@ -81,6 +84,7 @@ body{
         justify-content: flex-start;
         align-items: center;
         height: 70px;
+        transition: background-color 0.2s, background-image 0.2s;
       }
         .sIcon{/* Icon inside the div section categories */
           width: 40px;
@@ -95,20 +99,118 @@ body{
           font-weight: 700;
           line-height: 1.2;
         }
+          .iS{
+            position: absolute;
+            color: var(--danger);
+            font-size: 1em;
+            left: 150px;
+            top: 90px;
+            transition: font-size 1s;
+            transform: rotate(0deg);
+            animation: color-change 3s infinite, glow 1s ease-in-out infinite alternate;
 
-  
+          }
+
+          @keyframes color-change {
+            0% { color: red; rotate: 30deg; font-size: 1.3em; }
+            50% { color: blue; rotate: -30deg; font-size: 1em; }
+            100% { color: red; rotate: 30deg; font-size: 1.3em;}
+          }
+          @keyframes glow {
+            from {
+              text-shadow: 0 0 5px #fff, 0 0 20px rgb(255, 108, 108), 0 0 30px red;
+            }
+            
+            to {
+              text-shadow: 0 0 10px #fff, 0 0 30px blue;
+            }
+          }
+
+        .asideA a:hover .hToSec{
+          background-color: var(--green100);
+          background-image:linear-gradient( to right, var(--green100) 70%,rgb(122, 185, 149));
+        }
+
+  /* All about nav bars */
   .navbar { 
+    position: sticky;
+    top: 0px;
+    width: 100%;
     grid-area: navbar; 
     background-color: var(--black90);
+    display: grid;
+    grid-template-areas: 
+    "empty empty identity";
+    grid-template-columns: 100px 5cqh 1fr;
   }
-  
+
+  .identity{
+    grid-area: identity;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 20px;
+  }
+    .idImg{
+      background-color: var(--green100);
+      background-image: url(Photos/RobloxProfile.png);
+      background-size: 100%;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .idN{/* Id Name*/
+      color: var(--white90);
+    }
+
+    /* HOW TO DISABLE ANTIVIRUS */
+
+      .howTo{/* Directions. Follow the steps sign*/
+        color: var(--white70);
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      .dirP1{
+        font-size: 2.6vw;
+      }
+      .dAVC/* Disable antivirus container */{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+      .dAV{/* Disable antivirus video */
+        width: 40vw;
+        height: 20vw;
+      }
+      .dADesc{ /* Disable antivirus description */
+        color: var(--grayWhite);
+        width: 20vw; 
+        /* max-width: 400px; */
+        margin-right: 10px;
+        word-wrap: normal;
+        font-size: 1.2vw;
+        align-items: center;
+      }
+
+
+
+
+
+
+
+
+
   .body { 
     grid-area: body; 
     background-color: var(--black70);
     z-index: 3;
   }
   
-  .bodydiv{
+  .scriptSec{
     grid-area: body; 
     display: flex;
     flex-direction: row;
