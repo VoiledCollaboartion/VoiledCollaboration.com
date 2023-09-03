@@ -516,7 +516,7 @@ a:hover{
         justify-content: center; 
         align-items: center;
         margin-top: 60px;
-        background-image: url(Photos/linesGraphic.png);
+        /* background-image: url(Photos/linesGraphic.png); */
     }
 
     .JoH2{
