@@ -42,6 +42,7 @@ body{
     margin: 0;
     box-sizing: boreder-box;
     background-color: var(--black70);
+    overflow-x: hidden;
   }
   
   .container {  
@@ -68,11 +69,23 @@ body{
   background-color: var(--black99);
   box-shadow:  24px 0px 80px 0 rgba(0, 0, 0, 0.2), 26px 0px 20px 0 rgba(0, 0, 0, 0.19);
   }
-  
+    .asideControl{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 40px;
+      position: absolute;
+      left: 196px;
+      top: 0;
+    }
+
     .logo{
-      width: 80%;
+      width: 70%;
       height: auto;
       margin: 25px;
+      margin-right: 0;
     }
 
     .asideA{/*Aside Links*/
@@ -106,7 +119,7 @@ body{
             position: absolute;
             color: var(--danger);
             font-size: 1em;
-            left: 150px;
+            left: 105px;
             top: 90px;
             transition: font-size 1s;
             transform: rotate(0deg);
@@ -133,6 +146,61 @@ body{
           background-color: var(--green100);
           background-image:linear-gradient( to right, var(--green100) 70%,rgb(122, 185, 149));
         }
+
+        @media only screen and (max-width: 1300px) {
+          .container {  
+            grid-template-columns: 200px 10px 1fr 240px;
+            grid-template-areas:
+              "aside navbar navbar navbar"
+              "aside body body ad"
+              "aside body body ad";
+          }
+          
+          .aside { 
+          width: 180px;
+          }
+          .asideControl{
+            left: 140px;
+            width: 40px;
+            height: 32px;
+          }
+          .logo{
+            width: 60%;
+            height: auto;
+            margin: 20px;
+            margin-right: 0px;
+          }
+              .sIcon{/* Icon inside the div section categories */
+                width: 32px;
+                height: auto;
+                margin-left: 12px;
+                justify-content: center;
+              }
+              .iconDesc{
+                font-size: 1em;
+                font-weight: 600;
+              }
+                .iS{
+                  position: absolute;
+                  font-size: 0.8em;
+                  left: 77px;
+                  top: 74px;
+      
+                }
+                @keyframes color-change {
+                  0% { color: red; rotate: 30deg; font-size: 1em; }
+                  50% { color: blue; rotate: -30deg; font-size: 0.8em; }
+                  100% { color: red; rotate: 30deg; font-size: 1em;}
+                }
+              .hToSec{/*Links Sections*/
+                width: 100%;
+                justify-content: flex-start;
+                align-items: center;
+                height: 50px;
+              }
+        }
+        
+
 
   /* All about nav bars */
   .navbar { 
@@ -168,6 +236,10 @@ body{
       color: var(--white90);
     }
 
+    .body { 
+      grid-area: body; 
+      background-color: var(--black70);
+    }
     /* HOW TO DISABLE ANTIVIRUS */
 
       .howTo{/* Directions. Follow the steps sign*/
@@ -177,6 +249,12 @@ body{
       }
       .dirP1{
         font-size: 2.6vw;
+        margin-bottom: 0;
+      }
+      .dirP2{
+        color: var(--danger);
+        text-align: center;
+        margin-bottom: 60px;
       }
       .dAVC/* Disable antivirus container */{
         width: 100%;
@@ -207,20 +285,17 @@ body{
 
 
 
-  .body { 
-    grid-area: body; 
-    background-color: var(--black70);
-  }
+ 
   
   .scriptSec{
     grid-area: body; 
     display: flex;
+    display: none;
     flex-direction: row;
     gap: 50px;
     flex-wrap: wrap;
     margin-left: 10px;
     margin-top: 10px;
-    display: none;
     
   }
   .ad{
@@ -228,6 +303,42 @@ body{
     margin-top: 10px;
     background-color: rgb(119, 255, 8);
   }
+  .stepnum{
+    font-size: 6vw;
+
+  }
+
+  @media only screen and (max-width: 1100px) {
+    .container {  
+      grid-template-columns: 200px 10px 1fr;
+      grid-template-areas:
+        "aside navbar navbar"
+        "aside body body"
+        "aside body body";
+    }
+    .ad{
+      display: none;
+      grid-area: no;
+      margin-top: 0;
+      background-color: rgb(119, 255, 8);
+    }
+    .dAVC/* Disable antivirus container */{
+      flex-direction: column;
+    }
+    .dADesc{ /* Disable antivirus description */
+      color: var(--grayWhite);
+      width: 80%; 
+      margin-right: 10px;
+      word-wrap: normal;
+      font-size: 1.2em;
+      align-items: center;
+    }
+    .stepnum{
+      display: none;
+      
+    }
+  }
+
   .card{
     width: 400px;
     height: 600px;
