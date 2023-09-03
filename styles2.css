@@ -61,6 +61,9 @@ body{
   
   .aside { 
   grid-area: aside; 
+  position: fixed;
+  width: 240px;
+  height: 100dvh;
   z-index: 2;
   background-color: var(--black99);
   box-shadow:  24px 0px 80px 0 rgba(0, 0, 0, 0.2), 26px 0px 20px 0 rgba(0, 0, 0, 0.19);
@@ -133,15 +136,15 @@ body{
 
   /* All about nav bars */
   .navbar { 
-    position: sticky;
-    top: 0px;
-    width: 100%;
     grid-area: navbar; 
+    width: 100%;
+    height: 100px;
+    position: fixed;
     background-color: var(--black90);
     display: grid;
     grid-template-areas: 
     "empty empty identity";
-    grid-template-columns: 100px 5cqh 1fr;
+    grid-template-columns: 100px 1fr 280px;
   }
 
   .identity{
@@ -207,7 +210,6 @@ body{
   .body { 
     grid-area: body; 
     background-color: var(--black70);
-    z-index: 3;
   }
   
   .scriptSec{
