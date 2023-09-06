@@ -68,6 +68,7 @@ body{
   z-index: 2;
   background-color: var(--black99);
   box-shadow:  24px 0px 80px 0 rgba(0, 0, 0, 0.2), 26px 0px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: width 0.2s;
   }
     .asideControl{
       display: flex;
@@ -79,18 +80,21 @@ body{
       position: absolute;
       left: 196px;
       top: 0;
+      transition: left 0.2s;
     }
 
     .logo{
       width: 70%;
       height: auto;
-      margin: 25px;
+      margin: 10px;
       margin-right: 0;
+      transition: display 0.5s;
     }
 
     .asideA{/*Aside Links*/
       display: flex;
       flex-direction: column;
+      transition: all 1s;
     }
       .hToSec{/*Links Sections*/
         width: 100%;
@@ -104,8 +108,9 @@ body{
       }
         .sIcon{/* Icon inside the div section categories */
           width: 40px;
+          margin-left: 12px;
           height: auto;
-          margin-left: 15px;
+          transition: display 1s;
         }
         .iconDesc{
           font-family: "Roboto", sans-serif;
@@ -120,11 +125,10 @@ body{
             color: var(--danger);
             font-size: 1em;
             left: 105px;
-            top: 90px;
-            transition: font-size 1s;
+            top: 110px;
+            transition: font-size 1s, display 0.5s;
             transform: rotate(0deg);
             animation: color-change 3s infinite, glow 1s ease-in-out infinite alternate;
-
           }
 
           @keyframes color-change {
@@ -165,9 +169,9 @@ body{
             height: 32px;
           }
           .logo{
-            width: 60%;
+            width: 70%;
             height: auto;
-            margin: 20px;
+            margin-left: 3px;
             margin-right: 0px;
           }
               .sIcon{/* Icon inside the div section categories */
@@ -310,7 +314,7 @@ body{
 
   @media only screen and (max-width: 1100px) {
     .container {  
-      grid-template-columns: 200px 10px 1fr;
+      grid-template-columns: 2px 10px 1fr;
       grid-template-areas:
         "aside navbar navbar"
         "aside body body"
@@ -337,6 +341,56 @@ body{
       display: none;
       
     }
+
+    .navbar { 
+      grid-area: navbar; 
+      width: 100%;
+      height: 80px;
+      grid-template-areas: 
+      "empty empty identity";
+      grid-template-columns: 10px 1fr 140px;
+    }
+    .identity{
+      margin-right: 20px;
+      width: 160px;
+      justify-content: flex-start;
+    }
+    .idImg{
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+    .idN{/* Id Name*/
+      color: var(--white90);
+      font-size: 16px;
+    }
+     /* HOW TO DISABLE ANTIVIRUS */
+     .dirP1{
+      font-size: 6vw;
+      margin-bottom: 0;
+    }
+    .dirP2{
+      color: var(--danger);
+      margin-bottom: 40px;
+      font-size: 3vw;
+    }
+    .dAVC/* Disable antivirus container */{
+      width: 100%;
+      display: block;
+    }
+    .dAV{/* Disable antivirus video */
+      width: 76vw;
+      height: 42vw; 
+    }
+    .dADesc{ /* Disable antivirus description */
+      width: 100%; 
+      font-size: 3vw;
+      margin-bottom: 30px;
+
+    }
+
+
   }
 
   .card{
@@ -345,4 +399,3 @@ body{
     background-color: #09008a;
     flex-shrink: 0;
   }
-  
