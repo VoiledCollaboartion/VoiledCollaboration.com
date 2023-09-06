@@ -282,30 +282,11 @@ body{
       }
 
 
-
-
-
-
-
-
-
- 
-  
-  .scriptSec{
-    grid-area: body; 
-    display: flex;
-    display: none;
-    flex-direction: row;
-    gap: 50px;
-    flex-wrap: wrap;
-    margin-left: 10px;
-    margin-top: 10px;
-    
-  }
   .ad{
     grid-area: ad;
     margin-top: 10px;
     background-color: rgb(119, 255, 8);
+    width: 240px;
   }
   .stepnum{
     font-size: 6vw;
@@ -393,9 +374,74 @@ body{
 
   }
 
-  .card{
-    width: 400px;
-    height: 600px;
+   .scriptSec{
+    grid-area: body; 
+    display: flex;
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+    gap: 20px;
+    height: 410px;
+    margin-top: 10px;
+    background-color: #FF6746;
+
+  }
+    /* .card{
+    width: 220px;
+    height: 300px;
     background-color: #09008a;
     flex-shrink: 0;
-  }
+  } */
+   /*CARD 1*/
+   .card{
+    background-color: black;
+    width: 330px;
+    height: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+    position: relative;
+    left: 0px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.imgcontainer{
+
+    width: 100%;
+    height: 75%;
+    overflow: hidden;
+}
+
+    .imgS1{
+        width: auto;
+        height: 100%;
+        box-shadow: inset white 10px 10px 10px;
+        transition: height 1s;  
+    }
+    
+
+
+.imgdesc{
+    background-color: rgb(40,48,57);
+    height: 25%;
+    width: 100%;
+    margin-top: 0px;
+    padding: 0%;
+    overflow: hidden;
+
+
+}
+    .descH1{
+        margin-left: 25px;
+        margin-right: 25px;
+        margin-bottom: 0;
+        color: var(--white90);
+    }
+    .descH2{
+        margin-left: 25px;
+        margin-right: 25px;
+        color: var(--grayWhite);
+        margin-top: 0;
+    }

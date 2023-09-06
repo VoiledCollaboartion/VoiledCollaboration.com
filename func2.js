@@ -40,7 +40,7 @@ function iconText(){
     iconDesc3.style.display = "none";
     iconDesc4.style.display = "none";
     important.style.display = "none";
-    container.style.gridTemplateColumns = "70px 0px";
+    container.style.gridTemplateColumns = "70px 0px 1fr";
     icon1.style.justifyContent = "center"
     icon2.style.justifyContent = "center"
     icon3.style.justifyContent = "center"
