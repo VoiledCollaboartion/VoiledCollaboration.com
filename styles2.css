@@ -156,7 +156,7 @@ body{
 
         @media only screen and (max-width: 1300px) {
           .container { 
-            grid-template-columns: 200px 10px 1px 240px;
+            grid-template-columns: 200px 10px 1fr 240px;
             grid-template-areas:
               "aside navbar navbar navbar"
               "aside body body ad"
@@ -291,7 +291,7 @@ body{
     margin-top: 10px;
     background-color: rgb(119, 255, 8);
     width: 240px;
-    height: 100dvh;
+    height: 100dvw;
   }
   .stepnum{
     font-size: 6vw;
@@ -378,19 +378,22 @@ body{
 
 
   }
-
+  .scriptSecParent{
+    display: none;
+  }
    .scriptSec{
     grid-area: body; 
     display: flex;
-    display: none;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     overflow: hidden;
     gap: 20px;
-    height: 830px;
+    height: 420px;
     margin-top: 10px;
+    margin-left: 20px;
     flex-shrink: 1;
+    transition: height 0.1s ease;
     /* background-color: #FF6746; */
 
   }
@@ -488,4 +491,27 @@ body{
         opacity: 0;
       }
       
+    }
+    .topPick{
+      font-size: calc(15px + 1vw);
+      font-weight: bolder;
+      color: var(--white90);
+      margin-left: 30px;
+    }
+    .viewM{/* View More*/
+      margin-top: 10px;
+      margin-right: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      font-size: 0.8em;
+      float: right;
+      background-color: var(--green100);
+      border: transparent;
+      border-radius: 10px;
+      color: var(--white90);
+    }
+    .viewM:hover{
+      background-color: rgb(64, 146, 99);
     }

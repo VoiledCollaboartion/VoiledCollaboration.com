@@ -1,12 +1,12 @@
 
 function showHT(){
     document.getElementById("HT").style.display = "block";
-    document.getElementById("sS").style.display = "none";
+    document.getElementById("sSParent").style.display = "none";
 }
 
 function showsS(){
     document.getElementById("HT").style.display = "none";
-    document.getElementById("sS").style.display = "flex";
+    document.getElementById("sSParent").style.display = "block";
 }
 //end
 
@@ -40,7 +40,7 @@ function iconText(){
     iconDesc3.style.display = "none";
     iconDesc4.style.display = "none";
     important.style.display = "none";
-    container.style.gridTemplateColumns = "70px 1px 1fr 240px";
+    container.style.gridTemplateColumns = "70px 1px 1fr";
     icon1.style.justifyContent = "center"
     icon2.style.justifyContent = "center"
     icon3.style.justifyContent = "center"
@@ -105,3 +105,28 @@ $(document).ready(function () {
       $(".scriptSec").append(cards[i]);
     }
   });
+
+   
+    
+
+  function ViewM() {
+    // Get references to the elements
+    var viewM = document.getElementById("viewM1");
+    var sS = document.getElementById("sS");
+  
+    // Check the current state of visibility
+    if (sS.style.height === "830px") {
+      // If the height is 830px, hide the content
+      viewM.innerHTML = "View More";
+      sS.style.height = "420px";
+    } else if(sS.style.height === "420px") {
+      // Otherwise, show the content
+      viewM.innerHTML = "View Less";
+      sS.style.height = "830px";
+    } else {
+        // Otherwise, show the content
+        viewM.innerHTML = "View Less";
+        sS.style.height = "830px";
+      }
+  }
+   
