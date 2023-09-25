@@ -109,24 +109,35 @@ $(document).ready(function () {
    
     
 
-  function ViewM() {
-    // Get references to the elements
+  var isSVisible = false; // Variable to track the visibility state of sS
+var isS2Visible = false; // Variable to track the visibility state of sS2
+
+function ViewM() {
     var viewM = document.getElementById("viewM1");
     var sS = document.getElementById("sS");
-  
-    // Check the current state of visibility
-    if (sS.style.height === "830px") {
-      // If the height is 830px, hide the content
-      viewM.innerHTML = "View More";
-      sS.style.height = "420px";
-    } else if(sS.style.height === "420px") {
-      // Otherwise, show the content
-      viewM.innerHTML = "View Less";
-      sS.style.height = "830px";
-    } else {
-        // Otherwise, show the content
+
+    if (!isSVisible) { // Check if sS is currently hidden
         viewM.innerHTML = "View Less";
         sS.style.height = "830px";
-      }
-  }
-   
+    } else {
+        viewM.innerHTML = "View More";
+        sS.style.height = "420px";
+    }
+
+    isSVisible = !isSVisible; // Toggle the visibility state
+}
+
+function ViewM2() {
+    var viewM2 = document.getElementById("viewM2");
+    var sS2 = document.getElementById("sS2");
+
+    if (!isS2Visible) { // Check if sS2 is currently hidden
+        viewM2.innerHTML = "View Less";
+        sS2.style.height = "830px";
+    } else {
+        viewM2.innerHTML = "View More";
+        sS2.style.height = "420px";
+    }
+
+    isS2Visible = !isS2Visible; // Toggle the visibility state
+}
