@@ -4,6 +4,28 @@
     --graycolor: rgb(48,56,65); 
     --greencolor: rgb(90,183,130);
     --grayWhite: rgb(131,136,136);
+
+        --white99: rgb(243, 243, 243);
+        --white90: rgb(247,247,247);
+        --white70: rgb(231, 231, 231);
+        --black99: rgb(40,48,57);
+        --black90: rgb(48,56,65);
+        --black70: rgb(59, 66, 75);
+        --grayWhite: rgb(131,136,136);
+    
+        --goldenGray: #959595;
+        --gold: gold;
+    
+        --green100: rgb(90,183,130);
+        --yellow: rgb(255,248,8);
+        --textcolor: rgb(61,68,101);
+        /* Some more colors */
+        --primary: #5ab782;
+        --secondary: #B655E4;
+        --success: #37D159;
+        --info: #2B98D6;
+        --warning: #FF9F0F;
+        --danger: #FF6746;
 }
 .noclass{
     background-color:green;
@@ -44,42 +66,47 @@ a:hover{
     z-index: 1;
     top: 0px;
     width: 100%;
+    height: 105px;
+    display: grid;
+    grid-template-areas:"logo empty identity";
+    grid-template-columns: 400px 1fr 300px;
 }
-    .navUl{ /* Navigation part ul. */
-        background-color: var(--graycolor); 
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-        display: block;
-        overflow: hidden;
-    }
-        .navLiL{/* Navigation li categories Left*/
-            float: left;
+
+        .navIconDiv1{
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        .navLiR{/* Navigation li categories Right */
-            float: right;
-        }
-        .navA{ /*Navigation Navigation link*/
-            display: block;
-            text-decoration: none;
-            padding: 15px 30px;
-            background-color: var(--graycolor);
-           
-        }
-        .navS1{
-            margin-left: 100px;
+        .navIcon1{
+            grid-area: logo;
             overflow: hidden;
             width: 170px;
             height: auto; 
-            margin-top: 5px;
-            
         }
-        .navS2{
-            padding: 30px 40px;
-        }
-            .navA:hover{
-                background-color:var(--graycolor);
-                text-align: center;
+
+        .identity{
+            grid-area: identity;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            margin-right: 20px;
+          }
+            .idImg{
+                display: none;
+              background-color: var(--green100);
+              background-image: url(Photos/RobloxProfile.png);
+              background-size: 100%;
+              width: 60px;
+              height: 60px;
+              border-radius: 50%;
+              margin-right: 10px;
+            }
+            .idN{/* Id Name*/
+                display: none;
+                color: var(--white90);
             }
 
 
@@ -118,6 +145,11 @@ a:hover{
         font-size: calc(0.2em + 1vw);
     }
 
+
+
+    .aButton1Sec1{
+        text-decoration: none;
+    }
     .button1Sec1{
         padding: 10px 50px;
         border-radius: 20px;
@@ -210,8 +242,6 @@ a:hover{
             margin-top: 0px;
             padding: 0%;
             overflow: hidden;
-
-
         }
             .descH1{
                 margin-left: 25px;

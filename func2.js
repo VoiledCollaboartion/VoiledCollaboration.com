@@ -113,8 +113,8 @@ $(document).ready(function () {
 var isS2Visible = false; // Variable to track the visibility state of sS2
 
 function ViewM() {
-    var viewM = document.getElementById("viewM1");
-    var sS = document.getElementById("sS");
+    let viewM = document.getElementById("viewM1");
+    let sS = document.getElementById("sS");
 
     if (!isSVisible) { // Check if sS is currently hidden
         viewM.innerHTML = "View Less";

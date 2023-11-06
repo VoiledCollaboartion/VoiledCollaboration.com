@@ -115,3 +115,23 @@ function clickToMoveB3(){
         B2.style.backgroundColor = "var(--greencolor)";
         B3.style.backgroundColor = "var(--greencolor)";
 }
+
+// Button Check if loged in.
+
+function logInCheck() {
+    let scriptB = document.querySelector('.aButton1Sec1');
+    let userISLogged = JSON.parse(localStorage.getItem('userISLogged'))
+
+    if (userISLogged == true) {
+        scriptB.href = "page2.html";
+    } else {
+        scriptB.href = "register.html"
+    }
+}
+
+function resetStorage(){
+    localStorage.removeItem('userISLogged');
+    localStorage.removeItem('user');
+    console.log('"userISLogged" Sucsesfuly cleared.');
+    console.log('"user" Sucsesfuly cleared.');
+}

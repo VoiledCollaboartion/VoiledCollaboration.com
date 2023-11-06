@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="registerStyles.css">
+    <title>Document</title>
+    <script src="register.js"></script>
+</head>
+
+
+<body>
+
+    <nav class="nav">
+        <div class="navIconDiv1" >
+        <img class="navIcon1" src="Photos/page2/NewLogo2.png" alt="LogoText">
+        </div>
+        <button class="test" onclick="test()" >hello</button>
+
+
+        <div class="identity">
+            <div class="idImg"></div>
+            <h3 class="idN">Mr</h3>
+            <h3 class="idN">Voiled</h3>
+        </div>
+    </nav>
+
+    <div class="logInFormDiv">
+
+        <form class="logInForm">
+            <h1 style="text-align: center;">Login</h1>
+            <div class="input-container">
+                <input type="text" class="username" placeholder="Username / Email">
+                <img src="Photos/Login/user.png" class="user-icon" alt="User">
+            </div>
+            <div class="input-container">
+                <input type="password" class="password" placeholder="Password">
+                <img class="password-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAPlJREFUSEvt1TFKQ0EQxvFfvEKwEEEIFtp6BRvT2UjuIFiJjdgosVAsrOIdrOwCCXgFCxs7UQipxBuIEthA8ngvk/ckpMlWw87s99/9mN2tWfCoLVjfvIAjHGM/begZHTxFG5wHcIezAqFLXM2CRIAWHpNAGw8pPsFFig/QL4JEgBfs4RT3GZER4Bo9NKsCfrCGdXxlRDYwxDfqVQG/aWHRSaN82EWRQJRfDuAQN9iNejyTf0vt3J2cz/N2gM2S4uPyd2xHgLGvFRnTtuedYAWYcmVlUV6nLd+iT2xVvAQfaEQXbfRU3GKnJOQV5wifipK6s8ujH+3fsD+7PikZyw3tNAAAAABJRU5ErkJggg=="/>
+            </div>
+            <div style="display: flex;justify-content: center;">
+                <div class="remember-forgot" >
+                    <label><input type="checkbox">Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                    
+                </div>
+            </div>
+            <div class="button-wraper">
+                <button type="button" onclick="login()" class="loginButton">Login</button>
+            </div>
+            <div class="register">
+                <p>Dont have an account? <a onclick="goToRegister()"> Register</a></p>
+            </div>
+        </form>
+
+        <form class="register-form">
+            <h1 style="text-align: center;">Register</h1>
+            <div class="input-container">
+                <input type="text" class="regUsername" placeholder="Username" minlength="3" maxlength="16">
+                <img src="Photos/Login/user.png" class="user-icon" alt="User">
+            </div>
+            <div class="input-container">
+                <input type="text" class="email" placeholder="Email">
+                <img src="Photos/Login/email.png" class="user-icon" alt="User">
+            </div>
+            <div class="input-container">
+                <input type="password" class="regPassword" placeholder="Enter Password" minlength="8" maxlength="32">
+                <img class="password-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAPlJREFUSEvt1TFKQ0EQxvFfvEKwEEEIFtp6BRvT2UjuIFiJjdgosVAsrOIdrOwCCXgFCxs7UQipxBuIEthA8ngvk/ckpMlWw87s99/9mN2tWfCoLVjfvIAjHGM/begZHTxFG5wHcIezAqFLXM2CRIAWHpNAGw8pPsFFig/QL4JEgBfs4RT3GZER4Bo9NKsCfrCGdXxlRDYwxDfqVQG/aWHRSaN82EWRQJRfDuAQN9iNejyTf0vt3J2cz/N2gM2S4uPyd2xHgLGvFRnTtuedYAWYcmVlUV6nLd+iT2xVvAQfaEQXbfRU3GKnJOQV5wifipK6s8ujH+3fsD+7PikZyw3tNAAAAABJRU5ErkJggg=="/>
+            </div>
+            <div style="display: flex;justify-content: center;">
+                <div class="remember-forgot" >
+                    <label><input type="checkbox" class="agreTC">I agree to the Terms & Conditions</label>
+                    
+                </div>
+            </div>
+            <div class="button-wraper">
+                <button type="button" class="regButton" onclick="registerSubmit()">Register</button>
+            </div>
+            <div class="register">
+                <p>Already have an account? <a onclick="goToRegister()">Login</a></p>
+            </div>
+        </form>
+    </div>
+  
+
+
+</body>
+</html>

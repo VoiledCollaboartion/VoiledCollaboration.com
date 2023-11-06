@@ -15,10 +15,19 @@
 <body onload="move()">
 
   <nav class="nav">
-    <ul class="navUl">
-      <li class="navLiL"> <img class="navS1 " src="Photos/page2/NewLogo2.png" alt="LogoText"> </li>
-      <li class="navLiR"><a href="#" class="navA navS2">Leng</a></li>
-    </ul>
+    <div class="navIconDiv1" >
+      <img class="navIcon1" src="Photos/page2/NewLogo2.png" alt="LogoText">
+      <button onclick="resetStorage()">Reset Local Storage</button>
+    </div>
+
+
+    <div class="identity">
+      
+      <div class="idImg"></div>
+      <h3 class="idN">Mr</h3>
+      <h3 class="idN">Voiled</h3>
+    </div>
+    
   </nav>
 
   <section id="sectionNumber1" class="sec">
@@ -29,9 +38,12 @@
       <p class="p2">
         Discover the power of pata change by completing simple tasks, shortening links, and exploring investment opportunities. Join us today and unlock your earning potential with ease and enjoyment.
       </p>
-      <button class="button1Sec1">
-        <a href="page2.html" style="text-decoration: none;">SCRIPTS</a>
-      </button>
+
+      <a class="aButton1Sec1">
+        <button onclick="logInCheck()" class="button1Sec1">
+          SCRIPTS
+        </button>
+      </a>
       <button class="button2Sec1">
         EXECUTORS
       </button>

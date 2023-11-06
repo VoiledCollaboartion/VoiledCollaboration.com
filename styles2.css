@@ -291,7 +291,7 @@ body{
     margin-top: 10px;
     background-color: rgb(119, 255, 8);
     width: 240px;
-    height: 100dvw;
+    /* height: 100dvw; */
   }
   .stepnum{
     font-size: 6vw;
@@ -394,7 +394,7 @@ body{
     margin-left: 20px;
     flex-shrink: 1;
     transition: height 0.1s ease;
-    /* background-color: #FF6746; */
+    /* background-color: #FF6746;  */
 
   }
   .scriptSec2{
@@ -543,3 +543,7 @@ body{
     .viewM:hover{
       background-color: rgb(64, 146, 99);
     }
+
+  .executorSecParent{
+    display: none;
+  }
